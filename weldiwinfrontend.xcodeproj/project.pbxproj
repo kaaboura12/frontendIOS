@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		BAEBA3F32EB7F049004BD415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAEBA3D12EB7F048004BD415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAEBA3D82EB7F048004BD415;
+			remoteInfo = weldiwinfrontend;
+		};
+		BAEBA3FD2EB7F049004BD415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAEBA3D12EB7F048004BD415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAEBA3D82EB7F048004BD415;
+			remoteInfo = weldiwinfrontend;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAEBA3D92EB7F048004BD415 /* weldiwinfrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weldiwinfrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAEBA3F22EB7F049004BD415 /* weldiwinfrontendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weldiwinfrontendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAEBA3FC2EB7F049004BD415 /* weldiwinfrontendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weldiwinfrontendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BAEBA4042EB7F049004BD415 /* Exceptions for "weldiwinfrontend" folder in "weldiwinfrontend" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BAEBA3D82EB7F048004BD415 /* weldiwinfrontend */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BAEBA3DB2EB7F048004BD415 /* weldiwinfrontend */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BAEBA4042EB7F049004BD415 /* Exceptions for "weldiwinfrontend" folder in "weldiwinfrontend" target */,
+			);
+			path = weldiwinfrontend;
+			sourceTree = "<group>";
+		};
+		BAEBA3F52EB7F049004BD415 /* weldiwinfrontendTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = weldiwinfrontendTests;
+			sourceTree = "<group>";
+		};
+		BAEBA3FF2EB7F049004BD415 /* weldiwinfrontendUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = weldiwinfrontendUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAEBA3D62EB7F048004BD415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEBA3EF2EB7F049004BD415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEBA3F92EB7F049004BD415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAEBA3D02EB7F048004BD415 = {
+			isa = PBXGroup;
+			children = (
+				BAEBA3DB2EB7F048004BD415 /* weldiwinfrontend */,
+				BAEBA3F52EB7F049004BD415 /* weldiwinfrontendTests */,
+				BAEBA3FF2EB7F049004BD415 /* weldiwinfrontendUITests */,
+				BAEBA3DA2EB7F048004BD415 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAEBA3DA2EB7F048004BD415 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAEBA3D92EB7F048004BD415 /* weldiwinfrontend.app */,
+				BAEBA3F22EB7F049004BD415 /* weldiwinfrontendTests.xctest */,
+				BAEBA3FC2EB7F049004BD415 /* weldiwinfrontendUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAEBA3D82EB7F048004BD415 /* weldiwinfrontend */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAEBA4052EB7F049004BD415 /* Build configuration list for PBXNativeTarget "weldiwinfrontend" */;
+			buildPhases = (
+				BAEBA3D52EB7F048004BD415 /* Sources */,
+				BAEBA3D62EB7F048004BD415 /* Frameworks */,
+				BAEBA3D72EB7F048004BD415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BAEBA3DB2EB7F048004BD415 /* weldiwinfrontend */,
+			);
+			name = weldiwinfrontend;
+			packageProductDependencies = (
+			);
+			productName = weldiwinfrontend;
+			productReference = BAEBA3D92EB7F048004BD415 /* weldiwinfrontend.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAEBA3F12EB7F049004BD415 /* weldiwinfrontendTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAEBA40A2EB7F049004BD415 /* Build configuration list for PBXNativeTarget "weldiwinfrontendTests" */;
+			buildPhases = (
+				BAEBA3EE2EB7F049004BD415 /* Sources */,
+				BAEBA3EF2EB7F049004BD415 /* Frameworks */,
+				BAEBA3F02EB7F049004BD415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAEBA3F42EB7F049004BD415 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BAEBA3F52EB7F049004BD415 /* weldiwinfrontendTests */,
+			);
+			name = weldiwinfrontendTests;
+			packageProductDependencies = (
+			);
+			productName = weldiwinfrontendTests;
+			productReference = BAEBA3F22EB7F049004BD415 /* weldiwinfrontendTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAEBA3FB2EB7F049004BD415 /* weldiwinfrontendUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAEBA40D2EB7F049004BD415 /* Build configuration list for PBXNativeTarget "weldiwinfrontendUITests" */;
+			buildPhases = (
+				BAEBA3F82EB7F049004BD415 /* Sources */,
+				BAEBA3F92EB7F049004BD415 /* Frameworks */,
+				BAEBA3FA2EB7F049004BD415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAEBA3FE2EB7F049004BD415 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BAEBA3FF2EB7F049004BD415 /* weldiwinfrontendUITests */,
+			);
+			name = weldiwinfrontendUITests;
+			packageProductDependencies = (
+			);
+			productName = weldiwinfrontendUITests;
+			productReference = BAEBA3FC2EB7F049004BD415 /* weldiwinfrontendUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAEBA3D12EB7F048004BD415 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					BAEBA3D82EB7F048004BD415 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					BAEBA3F12EB7F049004BD415 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = BAEBA3D82EB7F048004BD415;
+					};
+					BAEBA3FB2EB7F049004BD415 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = BAEBA3D82EB7F048004BD415;
+					};
+				};
+			};
+			buildConfigurationList = BAEBA3D42EB7F048004BD415 /* Build configuration list for PBXProject "weldiwinfrontend" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAEBA3D02EB7F048004BD415;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BAEBA3DA2EB7F048004BD415 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAEBA3D82EB7F048004BD415 /* weldiwinfrontend */,
+				BAEBA3F12EB7F049004BD415 /* weldiwinfrontendTests */,
+				BAEBA3FB2EB7F049004BD415 /* weldiwinfrontendUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAEBA3D72EB7F048004BD415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEBA3F02EB7F049004BD415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEBA3FA2EB7F049004BD415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAEBA3D52EB7F048004BD415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEBA3EE2EB7F049004BD415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEBA3F82EB7F049004BD415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAEBA3F42EB7F049004BD415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAEBA3D82EB7F048004BD415 /* weldiwinfrontend */;
+			targetProxy = BAEBA3F32EB7F049004BD415 /* PBXContainerItemProxy */;
+		};
+		BAEBA3FE2EB7F049004BD415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAEBA3D82EB7F048004BD415 /* weldiwinfrontend */;
+			targetProxy = BAEBA3FD2EB7F049004BD415 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BAEBA4062EB7F049004BD415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TJAX36LVS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = weldiwinfrontend/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.weldiwinfrontend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAEBA4072EB7F049004BD415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TJAX36LVS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = weldiwinfrontend/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.weldiwinfrontend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAEBA4082EB7F049004BD415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4TJAX36LVS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAEBA4092EB7F049004BD415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4TJAX36LVS;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAEBA40B2EB7F049004BD415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TJAX36LVS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.weldiwinfrontendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weldiwinfrontend.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/weldiwinfrontend";
+			};
+			name = Debug;
+		};
+		BAEBA40C2EB7F049004BD415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TJAX36LVS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.weldiwinfrontendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weldiwinfrontend.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/weldiwinfrontend";
+			};
+			name = Release;
+		};
+		BAEBA40E2EB7F049004BD415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TJAX36LVS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.weldiwinfrontendUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = weldiwinfrontend;
+			};
+			name = Debug;
+		};
+		BAEBA40F2EB7F049004BD415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TJAX36LVS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = esprit.weldiwinfrontendUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = weldiwinfrontend;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAEBA3D42EB7F048004BD415 /* Build configuration list for PBXProject "weldiwinfrontend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEBA4082EB7F049004BD415 /* Debug */,
+				BAEBA4092EB7F049004BD415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAEBA4052EB7F049004BD415 /* Build configuration list for PBXNativeTarget "weldiwinfrontend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEBA4062EB7F049004BD415 /* Debug */,
+				BAEBA4072EB7F049004BD415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAEBA40A2EB7F049004BD415 /* Build configuration list for PBXNativeTarget "weldiwinfrontendTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEBA40B2EB7F049004BD415 /* Debug */,
+				BAEBA40C2EB7F049004BD415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAEBA40D2EB7F049004BD415 /* Build configuration list for PBXNativeTarget "weldiwinfrontendUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEBA40E2EB7F049004BD415 /* Debug */,
+				BAEBA40F2EB7F049004BD415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAEBA3D12EB7F048004BD415 /* Project object */;
+}
