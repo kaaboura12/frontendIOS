@@ -16,6 +16,9 @@ struct RegisterResponse: Codable {
 }
 
 struct SignUpView: View {
+    var onSignIn: () -> Void = {}
+    var onVerify: (_ email: String, _ phoneNumber: String?) -> Void = { _, _ in }
+
     // Backend-required
     @State private var firstName = ""
     @State private var lastName = ""
@@ -34,122 +37,109 @@ struct SignUpView: View {
     @State private var isLoading = false
     @State private var alertText: String?
     @State private var showAlert = false
-    @State private var navigateToVerify = false
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                // Background image
-                Image("iPhone 16 Pro - 8")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-                
-                ScrollView {
-                    VStack(spacing: 0) {
-                        // Logo at top
-                        Image("Gemini_Generated_Image_qr0yhoqr0yhoqr0y-removebg-preview")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 120, height: 120)
-                            .padding(.top, 50)
-                            .padding(.bottom, 10)
+        ZStack {
+            // Background image
+            Image("iPhone 16 Pro - 8")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            
+            ScrollView {
+                VStack(spacing: 0) {
+                    // Logo at top
+                    Image("Gemini_Generated_Image_qr0yhoqr0yhoqr0y-removebg-preview")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 120, height: 120)
+                        .padding(.top, 50)
+                        .padding(.bottom, 10)
+                    
+                    VStack(alignment: .leading, spacing: 18) {
+                        // Header
+                        Text("Sign Up")
+                            .font(.system(size: 42, weight: .bold, design: .serif))
+                            .foregroundStyle(.black.opacity(0.9))
                         
-                        VStack(alignment: .leading, spacing: 18) {
-                            // Header
-                            Text("Sign Up")
-                                .font(.system(size: 42, weight: .bold, design: .serif))
-                                .foregroundStyle(.black.opacity(0.9))
-                            
-                            HStack(spacing: 6) {
-                                Text("Already Have An Account")
-                                    .font(.system(size: 16))
-                                    .foregroundStyle(.black.opacity(0.75))
-                                NavigationLink(destination: SignInView()) {
-                                    Text("Sign In")
-                                        .font(.system(size: 16, weight: .semibold))
-                                        .foregroundStyle(Color(red: 0.95, green: 0.55, blue: 0.35))
-                                }
+                        HStack(spacing: 6) {
+                            Text("Already Have An Account")
+                                .font(.system(size: 16))
+                                .foregroundStyle(.black.opacity(0.75))
+                            Button(action: onSignIn) {
+                                Text("Sign In")
+                                    .font(.system(size: 16, weight: .semibold))
+                                    .foregroundStyle(Color(red: 0.95, green: 0.55, blue: 0.35))
                             }
-                            .padding(.bottom, 8)
-                            
-                            // Input fields - condensed
-                            VStack(spacing: 12) {
-                                // Name fields side by side
-                                HStack(spacing: 12) {
-                                    CompactField(placeholder: "First Name", text: $firstName)
-                                    CompactField(placeholder: "Last Name", text: $lastName)
-                                }
-                                
-                                CompactField(placeholder: "Email", text: $email, keyboard: .emailAddress, autocap: .never)
-                                CompactField(placeholder: "Phone Number", text: $phoneNumber, keyboard: .phonePad, autocap: .never)
-                                
-                                CompactPasswordField(placeholder: "Password", text: $password, show: $showPassword)
-                                CompactPasswordField(placeholder: "Confirm Password", text: $confirmPassword, show: $showConfirm)
-                            }
-                            
-                            // Sign Up button
-                            Button(action: submit) {
-                                HStack {
-                                    if isLoading {
-                                        ProgressView()
-                                            .tint(.white)
-                                            .scaleEffect(0.9)
-                                    }
-                                    Text(isLoading ? "Signing Up..." : "Sign Up")
-                                        .font(.system(size: 18, weight: .bold))
-                                }
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 56)
-                                .foregroundStyle(.white)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 28, style: .continuous)
-                                        .fill(
-                                            LinearGradient(
-                                                colors: [
-                                                    Color(red: 0.98, green: 0.65, blue: 0.45),
-                                                    Color(red: 0.95, green: 0.55, blue: 0.35)
-                                                ],
-                                                startPoint: .topLeading,
-                                                endPoint: .bottomTrailing
-                                            )
-                                        )
-                                        .shadow(color: Color(red: 0.95, green: 0.55, blue: 0.35).opacity(0.4), radius: 12, x: 0, y: 6)
-                                )
-                            }
-                            .disabled(isLoading)
-                            .padding(.top, 10)
-                            
-                            // Hidden NavigationLink for Verify
-                            NavigationLink(
-                                destination: VerifyCodeView(email: email, phoneNumber: phoneNumber),
-                                isActive: $navigateToVerify
-                            ) {
-                                EmptyView()
-                            }
-                            .hidden()
-                            
-                            // Social icons
-                            HStack(spacing: 50) {
-                                Spacer()
-                                SocialIcon(name: "paperplane.fill")
-                                SocialIcon(name: "globe")
-                                SocialIcon(name: "camera.fill")
-                                Spacer()
-                            }
-                            .padding(.top, 25)
-                            .padding(.bottom, 30)
                         }
-                        .padding(.horizontal, 28)
+                        .padding(.bottom, 8)
+                        
+                        // Input fields - condensed
+                        VStack(spacing: 12) {
+                            // Name fields side by side
+                            HStack(spacing: 12) {
+                                CompactField(placeholder: "First Name", text: $firstName)
+                                CompactField(placeholder: "Last Name", text: $lastName)
+                            }
+                            
+                            CompactField(placeholder: "Email", text: $email, keyboard: .emailAddress, autocap: .never)
+                            CompactField(placeholder: "Phone Number", text: $phoneNumber, keyboard: .phonePad, autocap: .never)
+                            
+                            CompactPasswordField(placeholder: "Password", text: $password, show: $showPassword)
+                            CompactPasswordField(placeholder: "Confirm Password", text: $confirmPassword, show: $showConfirm)
+                        }
+                        
+                        // Sign Up button
+                        Button(action: submit) {
+                            HStack {
+                                if isLoading {
+                                    ProgressView()
+                                        .tint(.white)
+                                        .scaleEffect(0.9)
+                                }
+                                Text(isLoading ? "Signing Up..." : "Sign Up")
+                                    .font(.system(size: 18, weight: .bold))
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 56)
+                            .foregroundStyle(.white)
+                            .background(
+                                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                                    .fill(
+                                        LinearGradient(
+                                            colors: [
+                                                Color(red: 0.98, green: 0.65, blue: 0.45),
+                                                Color(red: 0.95, green: 0.55, blue: 0.35)
+                                            ],
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        )
+                                    )
+                                    .shadow(color: Color(red: 0.95, green: 0.55, blue: 0.35).opacity(0.4), radius: 12, x: 0, y: 6)
+                            )
+                        }
+                        .disabled(isLoading)
+                        .padding(.top, 10)
+                        
+                        // Social icons
+                        HStack(spacing: 50) {
+                            Spacer()
+                            SocialIcon(name: "paperplane.fill")
+                            SocialIcon(name: "globe")
+                            SocialIcon(name: "camera.fill")
+                            Spacer()
+                        }
+                        .padding(.top, 25)
+                        .padding(.bottom, 30)
                     }
+                    .padding(.horizontal, 28)
                 }
             }
-            .navigationBarHidden(true)
-            .alert("Sign Up", isPresented: $showAlert) {
-                Button("OK", role: .cancel) { }
-            } message: {
-                Text(alertText ?? "")
-            }
+        }
+        .alert("Sign Up", isPresented: $showAlert) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(alertText ?? "")
         }
     }
     
@@ -184,7 +174,7 @@ struct SignUpView: View {
                         
                         // ✅ NO TOKEN STORAGE - just navigate to verify screen
                         print("✅ Registration successful: \(response.message)")
-                        self.navigateToVerify = true
+                        onVerify(email, phoneNumber)
                         
                     } catch {
                         // Show both error and raw response for debugging

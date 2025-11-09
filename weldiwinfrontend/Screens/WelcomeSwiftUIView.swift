@@ -68,7 +68,7 @@ struct OnboardingView: View {
                     .padding(.bottom, 80)
                     
                     // Get started button with navigation
-                    NavigationLink(destination: SignInView()) {
+                    NavigationLink(destination: AuthContainerView()) {
                         Text("Get started")
                             .font(.system(size: 20, weight: .semibold))
                             .frame(maxWidth: .infinity)

@@ -259,7 +259,7 @@ struct ChildProfileSwiftUIView: View {
             Text(alertText ?? "")
         }
         .background(
-            NavigationLink(destination: SignInView(), isActive: $navigateToSignIn) {
+            NavigationLink(destination: AuthContainerView(), isActive: $navigateToSignIn) {
                 EmptyView()
             }
             .hidden()
@@ -300,6 +300,7 @@ struct ChildProfileSwiftUIView: View {
     
     private func logout() {
         _ = KeychainHelper.shared.delete(forKey: "access_token")
+        UserDefaults.standard.removeObject(forKey: "authRole")
         navigateToSignIn = true
     }
 }

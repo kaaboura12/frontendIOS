@@ -227,7 +227,7 @@ struct EditProfileView: View {
                         self.firstName = profile.firstName
                         self.lastName = profile.lastName
                         self.email = profile.email
-                        self.phoneNumber = profile.phoneNumber
+                        self.phoneNumber = profile.phoneNumber!
                     } catch {
                         print("Failed to load profile: \(error)")
                     }

@@ -11,6 +11,8 @@ struct ResetPasswordView: View {
     @Environment(\.dismiss) var dismiss
     
     let email: String
+    var onBackToSignIn: (() -> Void)? = nil
+    var onFinished: (() -> Void)? = nil
     
     @State private var code: [String] = Array(repeating: "", count: 6)
     @FocusState private var focusedField: Int?
@@ -243,8 +245,7 @@ struct ResetPasswordView: View {
         .alert("Reset Password", isPresented: $showAlert) {
             Button("OK", role: .cancel) {
                 if passwordResetSuccess {
-                    // Go back to sign in
-                    dismiss()
+                    onFinished?()
                     dismiss()
                 }
             }

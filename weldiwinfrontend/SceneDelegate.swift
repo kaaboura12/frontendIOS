@@ -10,7 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                options connectionOptions: UIScene.ConnectionOptions) {
         
         // Create the SwiftUI view that provides the window contents.
-        let contentView = SignInView() // 👈 replace with your first SwiftUI view
+        let contentView = AuthContainerView() // 👈 replace with your first SwiftUI view
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

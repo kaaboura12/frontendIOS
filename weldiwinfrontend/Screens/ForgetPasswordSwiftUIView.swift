@@ -10,11 +10,13 @@ import SwiftUI
 struct ForgotPasswordView: View {
     @Environment(\.dismiss) var dismiss
     
+    var onBackToSignIn: (() -> Void)? = nil
+    var onReset: (_ email: String) -> Void = { _ in }
+    
     @State private var email = ""
     @State private var isLoading = false
     @State private var alertText: String?
     @State private var showAlert = false
-    @State private var navigateToReset = false
     
     var body: some View {
         ZStack {
@@ -119,19 +121,19 @@ struct ForgotPasswordView: View {
                         .disabled(isLoading)
                         .padding(.bottom, 30)
                         
-                        // Hidden NavigationLink
-                        NavigationLink(destination: ResetPasswordView(email: email), isActive: $navigateToReset) {
-                            EmptyView()
-                        }
-                        .hidden()
-                        
                         // Back to Sign In
                         HStack {
                             Spacer()
                             Text("Remember your password?")
                                 .font(.system(size: 15))
                                 .foregroundStyle(.black.opacity(0.7))
-                            Button(action: { dismiss() }) {
+                            Button(action: {
+                                if let onBackToSignIn {
+                                    onBackToSignIn()
+                                } else {
+                                    dismiss()
+                                }
+                            }) {
                                 Text("Sign In")
                                     .font(.system(size: 15, weight: .semibold))
                                     .foregroundStyle(Color(red: 0.95, green: 0.55, blue: 0.35))
@@ -184,8 +186,7 @@ struct ForgotPasswordView: View {
                         let response = try JSONDecoder().decode(ForgotPasswordResponse.self, from: data)
                         print("✅ Reset code sent: \(response.message)")
                         
-                        // Navigate to reset password screen
-                        self.navigateToReset = true
+                        onReset(email)
                         
                     } catch {
                         let raw = String(data: data, encoding: .utf8) ?? "Unknown"
@@ -194,7 +195,7 @@ struct ForgotPasswordView: View {
                         
                         // Still navigate even if parsing fails
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            self.navigateToReset = true
+                            onReset(email)
                         }
                     }
                     

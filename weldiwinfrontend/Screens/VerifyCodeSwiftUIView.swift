@@ -28,6 +28,7 @@ struct VerifyCodeView: View {
     
     let email: String
     let phoneNumber: String?
+    var onVerified: () -> Void = {}
     
     @State private var code: [String] = Array(repeating: "", count: 6)
     @FocusState private var focusedField: Int?
@@ -36,7 +37,6 @@ struct VerifyCodeView: View {
     @State private var showAlert = false
     @State private var canResend = false
     @State private var countdown = 60
-    @State private var navigateToProfile = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -155,11 +155,6 @@ struct VerifyCodeView: View {
                         .padding(.horizontal, 28)
                         .padding(.bottom, 40)
                         
-                        // Hidden NavigationLink to Profile
-                        NavigationLink(destination: ProfileView(), isActive: $navigateToProfile) {
-                            EmptyView()
-                        }
-                        .hidden()
                     }
                 }
             }
@@ -255,9 +250,7 @@ struct VerifyCodeView: View {
                         if saved {
                             print("✅ Token saved successfully")
                             print("✅ User verified: \(response.user.firstName) \(response.user.lastName)")
-                            
-                            // Navigate to profile
-                            self.navigateToProfile = true
+                            onVerified()
                         } else {
                             self.alertText = "Verification succeeded but failed to save token. Please try logging in."
                             self.showAlert = true

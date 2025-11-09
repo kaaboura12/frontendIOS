@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BAD6147C2EBFDD0700B67E7C /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = BAD6147B2EBFDD0700B67E7C /* GoogleSignIn */; };
+		BAD6147E2EBFDD0700B67E7C /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BAD6147D2EBFDD0700B67E7C /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BAEBA3F32EB7F049004BD415 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD6147C2EBFDD0700B67E7C /* GoogleSignIn in Frameworks */,
+				BAD6147E2EBFDD0700B67E7C /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +132,8 @@
 			);
 			name = weldiwinfrontend;
 			packageProductDependencies = (
+				BAD6147B2EBFDD0700B67E7C /* GoogleSignIn */,
+				BAD6147D2EBFDD0700B67E7C /* GoogleSignInSwift */,
 			);
 			productName = weldiwinfrontend;
 			productReference = BAEBA3D92EB7F048004BD415 /* weldiwinfrontend.app */;
@@ -208,6 +217,9 @@
 			);
 			mainGroup = BAEBA3D02EB7F048004BD415;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BAD614782EBFD9C600B67E7C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BAEBA3DA2EB7F048004BD415 /* Products */;
 			projectDirPath = "";
@@ -297,6 +309,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +338,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -571,6 +585,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BAD614782EBFD9C600B67E7C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BAD6147B2EBFDD0700B67E7C /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD614782EBFD9C600B67E7C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		BAD6147D2EBFDD0700B67E7C /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD614782EBFD9C600B67E7C /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BAEBA3D12EB7F048004BD415 /* Project object */;
 }

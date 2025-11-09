@@ -10,16 +10,17 @@ import Foundation
 enum Endpoint {
     case register
     case login
+    case googleLogin         // ✅ ADD THIS
     case profile
     case updateUser(userId: String)
     case verify
     case resendCode
     case forgotPassword
     case resetPassword
-    case children        // ✅ Add this
-    case createChild     // ✅ Add this
-    case qrLogin         // ✅ login qr code children
-    case childProfile    // ✅ display child profile
+    case children
+    case createChild
+    case qrLogin
+    case childProfile
     
     var url: URL? {
         switch self {
@@ -27,6 +28,8 @@ enum Endpoint {
             return URL(string: API.baseURL + "auth/register")
         case .login:
             return URL(string: API.baseURL + "auth/login")
+        case .googleLogin:       // ✅ ADD THIS
+            return URL(string: API.baseURL + "auth/login/google")
         case .profile:
             return URL(string: API.baseURL + "users/profile")
         case .updateUser(let userId):
@@ -39,9 +42,9 @@ enum Endpoint {
             return URL(string: API.baseURL + "auth/forgot-password")
         case .resetPassword:
             return URL(string: API.baseURL + "auth/reset-password")
-        case .children:              // ✅ Add this
+        case .children:
             return URL(string: API.baseURL + "children")
-        case .createChild:            // ✅ Add this
+        case .createChild:
             return URL(string: API.baseURL + "children")
         case .qrLogin:
             return URL(string: API.baseURL + "auth/login/qr")

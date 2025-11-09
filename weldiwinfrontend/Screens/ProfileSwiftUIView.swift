@@ -5,7 +5,7 @@ struct UserProfile: Codable {
     let firstName: String
     let lastName: String
     let email: String
-    let phoneNumber: String
+    let phoneNumber: String?  
     let role: String
     let avatarUrl: String?
     let status: String
@@ -88,18 +88,20 @@ struct ProfileView: View {
                                 value: profile.email
                             )
                             
-                            // Phone
+                            // Phone - ✅ UPDATED: Show placeholder if null
                             ProfileField(
                                 label: "Your Mobile number :",
-                                value: profile.phoneNumber
+                                value: profile.phoneNumber ?? "Not provided"
                             )
                             
-                            // Password (masked)
-                            ProfileField(
-                                label: "your Password :",
-                                value: "••••••••••••••••••••",
-                                isPassword: true
-                            )
+                            // Password (masked) - ✅ UPDATED: Hide for Google users
+                            if profile.phoneNumber != nil {
+                                ProfileField(
+                                    label: "your Password :",
+                                    value: "••••••••••••••••••••",
+                                    isPassword: true
+                                )
+                            }
                             
                             // ✅ Edit Profile Button
                             Button(action: {
@@ -167,7 +169,7 @@ struct ProfileView: View {
             }
             .hidden()
             
-            NavigationLink(destination: SignInView(), isActive: $navigateToSignIn) {
+            NavigationLink(destination: AuthContainerView(), isActive: $navigateToSignIn) {
                 EmptyView()
             }
             .hidden()
@@ -202,13 +204,19 @@ struct ProfileView: View {
                 self.isLoading = false
                 switch result {
                 case .success(let data):
+                    // ✅ ADD DEBUG LOGGING
+                    print("📥 Profile data: \(String(data: data, encoding: .utf8) ?? "nil")")
+                    
                     do {
                         let profile = try JSONDecoder().decode(UserProfile.self, from: data)
                         self.profile = profile
+                        print("✅ Profile loaded successfully!")
                     } catch {
+                        print("❌ Decoding error: \(error)")
                         self.errorMessage = "Failed to parse profile: \(error.localizedDescription)"
                     }
                 case .failure(let error):
+                    print("❌ Network error: \(error)")
                     self.errorMessage = error.localizedDescription
                 }
             }
@@ -220,6 +228,7 @@ struct ProfileView: View {
     private func logout() {
         // Delete token from keychain
         let deleted = KeychainHelper.shared.delete(forKey: "access_token")
+        UserDefaults.standard.removeObject(forKey: "authRole")
         
         if deleted {
             print("✅ Token deleted successfully")
